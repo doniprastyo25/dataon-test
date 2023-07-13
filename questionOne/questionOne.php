@@ -82,4 +82,7 @@ foreach ($dataKainDanKualitas as $row) {
     }
 }
 
+$querydatafinal = "SELECT jenis_kain.nama_jenis, jenis_kain.nama_kain, kualitas_kain.id, kualitas_kain.nama_kualitas, kain_dan_kualitas.harga FROM jenis_kain, kualitas_kain, kain_dan_kualitas WHERE jenis_kain.id=kain_dan_kualitas.id_kain AND kualitas_kain.id=kain_dan_kualitas.id_kualitas;
+";
+
 $database->close();
